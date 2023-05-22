@@ -24,7 +24,7 @@ class QuanLyHoaDon {
     public int demSoLuongKhachHangNoiDia() {
         int count = 0;
         for (HoaDon hoaDon : danhSachHoaDon) {
-            if (hoaDon instanceof KhachHangVietNam) {
+            if (hoaDon instanceof KhachHangNoiDia) {
                 count++;
             }
         }
@@ -46,10 +46,10 @@ class QuanLyHoaDon {
         return tongThanhTien / count;
     }
 
-    public void xuatHoaDonThang9Nam2013() {
-        System.out.println("Hoá đơn trong tháng 09 năm 2013:");
+    public void xuatHoaDonThang5Nam2023() {
+        System.out.println("Hoá đơn trong tháng 05 năm 2023:");
         for (HoaDon hoaDon : danhSachHoaDon) {
-            if (hoaDon.ngayRaHoaDon.contains("09/2013")) {
+            if (hoaDon.ngayRaHoaDon.contains("05/2023")) {
                 hoaDon.xuatThongTin();
             }
         }
@@ -58,11 +58,11 @@ class QuanLyHoaDon {
  public static void main(String[] args) {
         QuanLyHoaDon qlhd = new QuanLyHoaDon();
 
-       KhachHangNoiDia khachHang1 = new KhachHangNoiDia("KH001", "Nguyễn Văn A", "01/09/2013", "sinh hoạt",
+       KhachHangNoiDia khachHang1 = new KhachHangNoiDia("msKH1", "Bùi Đức Trọng ", "19/05/2023", "sinh hoạt",
                 100, 5000, 50);
-        KhachHangNoiDia khachHang2 = new KhachHangNoiDia("KH002", "Trần Thị B", "02/09/2013", "kinh doanh",
+        KhachHangNoiDia khachHang2 = new KhachHangNoiDia("msKH2", "Trần Thái Thiên", "20/05/2023", "kinh doanh",
                 150, 6000, 80);
-        KhachHangNuocNgoai khachHang3 = new KhachHangNuocNgoai("KH003", "John Smith", "03/09/2013", "USA",
+        KhachHangNuocNgoai khachHang3 = new KhachHangNuocNgoai("msKH3", "Tony Tèo", "25/05/2023", "QUANCAM",
                 200, 7000);
 
         qlhd.themHoaDon(khachHang1);
@@ -71,14 +71,13 @@ class QuanLyHoaDon {
 
         qlhd.xuatDanhSachHoaDon();
 
-        int soLuongKhachHangNoiDia = qlhd.demSoLuongKhachNoiDia();
-        System.out.println("Tổng số lượng khách hàng Nội Địa : " + soLuongKhachHangVietNam);
+        int soLuongKhachHangNoiDia = qlhd.demSoLuongKhachHangNoiDia();
+        System.out.println("Tổng số lượng khách hàng Nội Địa : " + soLuongKhachHangNoiDia);
 
         double trungBinhThanhTienKhachHangNuocNgoai = qlhd.tinhTrungBinhThanhTienKhachHangNuocNgoai();
         System.out.println("Trung bình thành tiền khách hàng nước ngoài: " + trungBinhThanhTienKhachHangNuocNgoai);
 
-        qlhd.xuatHoaDonThang9Nam2013();
+        qlhd.xuatHoaDonThang5Nam2023();
     }
 }
-
 
