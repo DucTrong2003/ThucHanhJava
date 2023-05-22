@@ -1,20 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package newpackage1;
 
-/**
- *
- * @author ADMIN
- */
-class KhachHangVietNam extends HoaDon {
+class KhachHangNoiDia extends HoaDon {
     private String doiTuongKhachHang;
     private double soLuong;
     private double donGia;
     private double dinhMuc;
 
-    public KhachHangVietNam(String maKhachHang, String hoTen, String ngayRaHoaDon, String doiTuongKhachHang,
+    public KhachHangNoiDia(String maKhachHang, String hoTen, String ngayRaHoaDon, String doiTuongKhachHang,
             double soLuong, double donGia, double dinhMuc) {
         super(maKhachHang, hoTen, ngayRaHoaDon);
         this.doiTuongKhachHang = doiTuongKhachHang;
