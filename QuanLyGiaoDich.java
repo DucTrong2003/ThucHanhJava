@@ -56,9 +56,9 @@ public class QuanLyGiaoDich {
         return sum / count;
     }
 
-    public void xuatGiaoDichThang9Nam2013() {
+    public void xuatGiaoDichThang5Nam2023() {
         for (GiaoDich giaoDich : danhSachGiaoDich) {
-            if (giaoDich.ngayGd.contains("09/2013")) {
+            if (giaoDich.ngayGd.contains("05/2023")) {
                 System.out.println("Mã giao dịch: " + giaoDich.maGd);
                 System.out.println("Ngày giao dịch: " + giaoDich.ngayGd);
                 System.out.println("Thành tiền: " + giaoDich.tinhThanhTien());
@@ -70,10 +70,10 @@ public class QuanLyGiaoDich {
  public static void main(String[] args) {
         QuanLyGiaoDich qlgd = new QuanLyGiaoDich();
 
-        GiaoDichDat gdDat1 = new GiaoDichDat("GD001", "01/09/2013", 100, 200, "A");
-        GiaoDichDat gdDat2 = new GiaoDichDat("GD002", "02/09/2013", 150, 300, "B");
-        GiaoDichNha gdNha1 = new GiaoDichNha("GD003", "03/09/2013", 200, 150, "cao cấp", "123 ABC Street");
-        GiaoDichNha gdNha2 = new GiaoDichNha("GD004", "04/09/2013", 180, 200, "thường", "456 XYZ Street");
+        GiaoDichDat gdDat1 = new GiaoDichDat("MSDD1", "19/05/2023", 100, 200, "A");
+        GiaoDichDat gdDat2 = new GiaoDichDat("MSDD2", "20/05/2023", 150, 300, "B");
+        GiaoDichNha gdNha1 = new GiaoDichNha("MSDD3", "21/05/2023", 200, 150, "cao cấp", "123 ABC Street");
+        GiaoDichNha gdNha2 = new GiaoDichNha("MSDD4", "22/05/2023", 180, 200, "thường", "456 XYZ Street");
 
         qlgd.themGiaoDich(gdDat1);
         qlgd.themGiaoDich(gdDat2);
@@ -90,7 +90,7 @@ public class QuanLyGiaoDich {
         System.out.println("Số lượng giao dịch nhà: " + soLuongGiaoDichNha);
         System.out.println("Trung bình thành tiền giao dịch đất: " + trungBinhThanhTienGiaoDichDat);
 
-        System.out.println("Các giao dịch tháng 9 năm 2013:");
-        qlgd.xuatGiaoDichThang9Nam2013();
+        System.out.println("Các giao dịch tháng 5 năm 2023:");
+        qlgd.xuatGiaoDichThang5Nam2023();
     }
 }
