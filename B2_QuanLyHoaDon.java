@@ -1,16 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package newpackage1;
 
+package thuchanh4;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author ADMIN
- */
+
 class QuanLyHoaDon {
     private List<HoaDon> danhSachHoaDon;
 
@@ -28,7 +21,7 @@ class QuanLyHoaDon {
         }
     }
 
-    public int demSoLuongKhachHangVietNam() {
+    public int demSoLuongKhachHangNoiDia() {
         int count = 0;
         for (HoaDon hoaDon : danhSachHoaDon) {
             if (hoaDon instanceof KhachHangVietNam) {
@@ -65,9 +58,9 @@ class QuanLyHoaDon {
  public static void main(String[] args) {
         QuanLyHoaDon qlhd = new QuanLyHoaDon();
 
-        KhachHangVietNam khachHang1 = new KhachHangVietNam("KH001", "Nguyễn Văn A", "01/09/2013", "sinh hoạt",
+       KhachHangNoiDia khachHang1 = new KhachHangNoiDia("KH001", "Nguyễn Văn A", "01/09/2013", "sinh hoạt",
                 100, 5000, 50);
-        KhachHangVietNam khachHang2 = new KhachHangVietNam("KH002", "Trần Thị B", "02/09/2013", "kinh doanh",
+        KhachHangNoiDia khachHang2 = new KhachHangNoiDia("KH002", "Trần Thị B", "02/09/2013", "kinh doanh",
                 150, 6000, 80);
         KhachHangNuocNgoai khachHang3 = new KhachHangNuocNgoai("KH003", "John Smith", "03/09/2013", "USA",
                 200, 7000);
@@ -78,8 +71,8 @@ class QuanLyHoaDon {
 
         qlhd.xuatDanhSachHoaDon();
 
-        int soLuongKhachHangVietNam = qlhd.demSoLuongKhachHangVietNam();
-        System.out.println("Tổng số lượng khách hàng Việt Nam: " + soLuongKhachHangVietNam);
+        int soLuongKhachHangNoiDia = qlhd.demSoLuongKhachNoiDia();
+        System.out.println("Tổng số lượng khách hàng Nội Địa : " + soLuongKhachHangVietNam);
 
         double trungBinhThanhTienKhachHangNuocNgoai = qlhd.tinhTrungBinhThanhTienKhachHangNuocNgoai();
         System.out.println("Trung bình thành tiền khách hàng nước ngoài: " + trungBinhThanhTienKhachHangNuocNgoai);
